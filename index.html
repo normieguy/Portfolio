@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Danish Arora — Undergraduate Student &amp; Developer</title>
+<meta name="description" content="Portfolio of Danish Arora, undergraduate student at VIT Chennai — building AI, machine learning and full-stack projects. Explore completed work and upcoming projects." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="grid-overlay"></div>
+
+<header class="nav-wrap" id="nav">
+  <nav class="nav container">
+    <a href="#top" class="logo">DA<span class="logo-dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#upcoming">Upcoming</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="resume-updated.html" class="nav-cta">Resume</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <p class="hero-eyebrow reveal">Hi there, I&rsquo;m</p>
+    <h1 class="hero-name reveal"><span class="gradient-text">Danish Arora</span></h1>
+    <h2 class="hero-role reveal">
+      <span class="role-static">Undergraduate Student · VIT Chennai · </span><span id="typed"></span><span class="cur">|</span>
+    </h2>
+    <p class="hero-tag reveal">I build AI-driven products that turn raw data into decisions — from real-time stock trading signals to smart travel planning interfaces. Currently exploring machine learning, full-stack development, and explainable AI.</p>
+    <div class="hero-actions reveal">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#upcoming" class="btn btn-ghost">Upcoming Work</a>
+      <a href="resume.html" class="btn btn-outline">Resume</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Projects Built</span></div>
+      <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">Upcoming</span></div>
+      <div class="stat"><span class="stat-num" data-count="0.8856" data-decimals="4">0</span><span class="stat-label">Best R² Score</span></div>
+    </div>
+  </div>
+  <a href="#projects" class="scroll-cue" aria-label="Scroll to projects"><span></span></a>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <span class="section-eyebrow reveal">// My Work</span>
+    <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
+    <p class="section-sub reveal">Production-grade builds with real data, real models, and real deployment.</p>
+    <div class="projects-grid" id="projectsGrid"><!-- injected by main.js --></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="upcoming">
+  <div class="container">
+    <span class="section-eyebrow reveal">// What&rsquo;s Next</span>
+    <h2 class="section-title reveal">Upcoming <span class="gradient-text">Projects</span></h2>
+    <p class="section-sub reveal">Currently in the pipeline — being designed, trained, or deployed.</p>
+    <div class="timeline" id="upcomingList"><!-- injected by main.js --></div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <span class="section-eyebrow reveal">// Toolbox</span>
+    <h2 class="section-title reveal">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+    <div class="skills-wrap">
+      <div class="skill-col">
+        <h3>Core</h3>
+        <div class="skill-bar" data-level="90"><span>Python</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="85"><span>Pandas &amp; NumPy</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="80"><span>Scikit-Learn</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="75"><span>XGBoost / LightGBM</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="70"><span>Flask</span><div class="bar"><i></i></div></div>
+      </div>
+      <div class="skill-col">
+        <h3>Web &amp; Tools</h3>
+        <div class="skill-bar" data-level="85"><span>React + Vite</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="75"><span>HTML / CSS / JavaScript</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="80"><span>SQL</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="70"><span>Power BI</span><div class="bar"><i></i></div></div>
+        <div class="skill-bar" data-level="65"><span>Git / GitHub</span><div class="bar"><i></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt contact" id="contact">
+  <div class="container contact-inner">
+    <span class="section-eyebrow reveal">// Let&rsquo;s Connect</span>
+    <h2 class="section-title reveal">Open to <span class="gradient-text">Opportunities</span></h2>
+    <p class="section-sub reveal">Internships, freelance builds, research collaborations — reach out anytime.</p>
+    <div class="contact-cards reveal">
+      <a href="https://github.com/normieguy" target="_blank" rel="noopener" class="contact-card">
+        <span class="cc-icon">💻</span><span>GitHub</span><small>@normieguy</small>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="contact-card">
+        <span class="cc-icon">🔗</span><span>LinkedIn</span><small>Danish Arora</small>
+      </a>
+      <a href="mailto:you-email@example.com" class="contact-card">
+        <span class="cc-icon">✉</span><span>Email</span><small>email@example.com</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Danish Arora — Built with HTML, CSS, JavaScript &amp; <span class="grad">a lot of caffeine</span></p>
+  <span class="visit-count" id="visitCount"></span>
+</footer>
+
+<script src="main.js"></script>
+<script src="assets/counter.js"></script>
+</body>
+</html>
