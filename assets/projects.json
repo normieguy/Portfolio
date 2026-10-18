@@ -1,0 +1,107 @@
+{
+  "projects": [
+    {
+      "id": "nivora",
+      "icon": "🏡",
+      "tags": ["HTML", "CSS", "JavaScript", "MySQL/Supabase"],
+      "title": "Nivora — Smart Homestay Booking & Travel Planning Platform",
+      "summary": "Web-based accommodation booking platform for discovering and booking homestays, villas, and apartments across popular travel destinations, with search, dashboards and an AI trip planner.",
+      "highlights": [
+        "Property search and filtering by destination, check-in/check-out dates, guest count and accommodation preferences",
+        "Host and admin dashboards for listing management, reservation tracking, availability and dynamic pricing",
+        "AI-powered trip planning interface generating personalized itineraries and destination recommendations",
+        "Responsive UI, transparent pricing and a user-friendly booking experience"
+      ],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/normieguy/Nivora" },
+        { "label": "Live Site", "url": "https://nivorahrms.netlify.app" }
+      ]
+    },
+    {
+      "id": "sudoku-solver",
+      "icon": "🧩",
+      "tags": ["JavaScript", "Algorithms", "OCR", "Tesseract.js"],
+      "title": "Advanced Sudoku Solver",
+      "summary": "Zero-dependency browser Sudoku solver in vanilla JavaScript that handles 4x4, 9x9, 16x16 and 25x25 boards. Solve any grid with a backtracking algorithm, or photograph a printed puzzle and let the built-in Tesseract.js OCR scan the digits straight into the board.",
+      "highlights": [
+        "Backtracking solver with per-cell constraint validation",
+        "Image-to-grid scanning powered by Tesseract.js",
+        "Supports 4, 9, 16 and 25 cell board sizes",
+        "Plain HTML/CSS/JS — about 470 lines, no build step",
+        "Live on GitHub Pages"
+      ],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/normieguy/sudoku" },
+        { "label": "Live Site", "url": "https://normieguy.github.io/sudoku/" }
+      ]
+    },
+    {
+      "id": "stock-price-predictor",
+      "icon": "📈",
+      "tags": ["React 19", "Python", "Firebase", "yfinance"],
+      "title": "Stock Price Predictor",
+      "summary": "Real-time trading-signal dashboard. A Python backend pulls 5-minute candles from yfinance, computes RSI, Bollinger Bands and Fibonacci retracement, then generates BUY/SELL signals with confidence scores and plain-English reasons every 5 seconds into Firebase Firestore \u2014 where a React 19 frontend renders live candlestick charts with TradingView lightweight-charts and instant ticker search.",
+      "highlights": [
+        "Python signal engine: RSI (14), Bollinger Bands (20) and Fibonacci 61.8% levels",
+        "BUY / SELL signals scored 50\u201390 confidence with explained reasoning",
+        "Firestore realtime stream syncs backend loop to the browser chart",
+        "Candlestick chart with Fibonacci and Bollinger overlays (lightweight-charts)",
+        "Search any ticker from the UI; shared symbol config across clients"
+      ],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/normieguy/Stock-Price-Predictor" },
+        { "label": "Live Site", "url": "https://aispp.netlify.app" }
+      ]
+    }
+  ],
+  "upcoming": [
+    {
+      "icon": "🔍",
+      "tags": ["AI", "Explainability"],
+      "title": "SHAP Explainability Layer for MediCost AI",
+      "status": "In Development",
+      "summary": "Adding SHAP (SHapley Additive Explanations) to MediCost AI so every prediction ships with per-feature contribution scores, visual explanations in the browser, and stakeholder-ready justification."
+    },
+    {
+      "icon": "📊",
+      "tags": ["BI", "Dashboarding"],
+      "title": "Power BI Analytics Dashboard",
+      "status": "Planned",
+      "summary": "Building a Power BI dashboard over the insured-risk dataset to turn model insights into executive-facing visual storytelling for insurance and finance teams."
+    },
+    {
+      "icon": "🔐",
+      "tags": ["Auth", "Backend"],
+      "title": "Insurance Agent Authentication Module",
+      "status": "Planned",
+      "summary": "Adding secure agent login and profile-scoped analytics so that insurers can tag their own book of customers into MediCost AI and pull personalized segments."
+    },
+    {
+      "icon": "🐳",
+      "tags": ["DevOps", "CI/CD"],
+      "title": "Docker + CI/CD Pipeline",
+      "status": "Planned",
+      "summary": "Containerising MediCost AI with Docker and wiring a GitHub Actions pipeline that runs lint, unit tests, model smoke-tests, and auto-deploys on push."
+    },
+    {
+      "icon": "📡",
+      "tags": ["MLOps", "Monitoring"],
+      "title": "Model Monitoring & Drift Detection",
+      "status": "Planned",
+      "summary": "Setting up a monitoring layer that logs every prediction, tracks prediction drift live, and raises alerts when the distribution of inputs shifts away from training data."
+    },
+    {
+      "icon": "🧠",
+      "tags": ["NLP", "LLM"],
+      "title": "LLM Insurance Support Companion",
+      "status": "Ideas Pile",
+      "summary": "A conversational assistant that answers customer insurance questions, reads the predicted-cost explanation, and proactively suggests coverage-grade actions."
+    },
+    {
+      "icon": "📚",
+      "tags": ["RAG", "FastAPI", "PostgreSQL"],
+      "title": "AI Research Copilot with Source Verification",
+      "status": "Planned",
+      "summary": "An AI assistant that reads PDFs, research papers and reports, answers questions from them with page-level citations, compares two papers and extracts their differences, flags unsupported claims and generates summaries. Stack: Next.js, TypeScript, FastAPI, PostgreSQL with pgvector, an LLM API and Docker \u2014 with user accounts, saved documents and document history. Not just a chatbot: retrieval, backend APIs, databases and evaluation."
+    }  ]
+}
