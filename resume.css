@@ -1,6 +1,4 @@
-/* ============================================================
-   Resume page — print-friendly, pairs with the dark portfolio
-   ============================================================ */
+
 :root {
   --ink: #1a2233;
   --dim: #55607a;
@@ -15,7 +13,6 @@ body {
   background: #eef1f7; color: var(--ink); line-height: 1.55;
 }
 
-/* ---- floating action bar ---- */
 .page-actions {
   position: fixed; top: 18px; right: 18px; z-index: 50;
   display: flex; gap: 10px;
@@ -29,14 +26,12 @@ body {
 .pa-primary { background: linear-gradient(135deg, #0e7490, #6d28d9); color: #fff; }
 .pa-ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
 
-/* ---- page sheet ---- */
 .resume-page {
   max-width: 820px; margin: 40px auto 60px; background: var(--paper);
   border-radius: 14px; padding: 52px 56px;
   box-shadow: 0 20px 60px rgba(15, 23, 42, .10);
 }
 
-/* ---- header ---- */
 .r-header { border-bottom: 3px solid var(--accent); padding-bottom: 22px; margin-bottom: 28px; position: relative; }
 .r-header::after {
   content: ''; position: absolute; top: -3px; left: 0; height: 3px; width: 40%;
@@ -46,7 +41,6 @@ body {
 .r-headline { color: var(--accent); font-weight: 600; margin-top: 4px; }
 .r-contact { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; color: var(--dim); font-size: .9rem; }
 
-/* ---- sections ---- */
 .r-section { margin-bottom: 30px; }
 .r-section h2 {
   font-size: 1rem; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent);
@@ -54,24 +48,21 @@ body {
 }
 .r-section p { margin-bottom: 8px; }
 
-/* ---- skills ---- */
 .r-skills { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; font-size: .95rem; }
 .r-skills strong { color: var(--accent2); font-weight: 700; }
 
-/* ---- items ---- */
 .r-item { margin-bottom: 18px; }
 .r-item-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
 .r-item-head h3 { font-size: 1.06rem; font-weight: 700; }
 .r-when { font-size: .82rem; color: var(--dim); font-family: 'JetBrains Mono', Consolas, monospace; }
-.r-bullets { margin: 6px 0 0 20px; color: #333c50; font-size: .95rem; }
-.r-bullets li { margin-bottom: 5px; }
+/* .r-bullets { margin: 6px 0 0 20px; color: #333c50; font-size: .95rem; }
+.r-bullets li { margin-bottom: 5px; } */
 .r-dim { color: var(--dim); font-size: .92rem; margin-top: 4px; }
 .mono { font-family: 'JetBrains Mono', Consolas, monospace; font-size: .88em; }
 
 .r-footer { text-align: center; color: var(--dim); font-size: .82rem; border-top: 1px solid var(--line); padding-top: 16px; position: relative; }
 .visit-count { position: absolute; right: 0; bottom: 0; font-size: .72rem; letter-spacing: .14em; font-family: 'JetBrains Mono', Consolas, monospace; color: var(--dim); opacity: .65; }
 
-/* ---- responsive ---- */
 @media (max-width: 720px) {
   .resume-page { margin: 16px; padding: 30px 22px; border-radius: 10px; }
   .r-header h1 { font-size: 1.8rem; }
@@ -79,7 +70,6 @@ body {
   .page-actions { left: 16px; right: 16px; justify-content: space-between; }
 }
 
-/* ---- print ---- */
 @media print {
   body { background: #fff; }
   .no-print { display: none !important; }
