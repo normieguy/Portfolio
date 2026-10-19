@@ -1,9 +1,4 @@
-/* ============================================================
-   Portfolio JS — particle field, typing effect, scroll reveal,
-   counters, skill bars, JSON-driven projects, mobile nav
-   ============================================================ */
 
-/* ---------- Load project data ---------- */
 let PROJECT_DATA = { projects: [], upcoming: [] };
 
 function loadProjects() {
@@ -48,7 +43,6 @@ function renderUpcoming() {
   observeTimeline();
 }
 
-/* ---------- Scroll reveal (IntersectionObserver) ---------- */
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
 }, { threshold: 0.12 });
@@ -69,7 +63,6 @@ function observeTimeline() {
   document.querySelectorAll('.tl-item:not(.visible)').forEach(el => tlObserver.observe(el));
 }
 
-/* ---------- Counter animation for hero stats ---------- */
 function animateCounter(el) {
   const target = parseFloat(el.dataset.count);
   const decimals = parseInt(el.dataset.decimals || '0', 10);
@@ -88,7 +81,6 @@ const counterObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 document.querySelectorAll('.stat-num').forEach(el => counterObserver.observe(el));
 
-/* ---------- Skill bars ---------- */
 function fillSkillBar(el) {
   const bar = el.querySelector('.bar i');
   if (bar && !bar.style.width) bar.style.width = el.dataset.level + '%';
@@ -102,15 +94,13 @@ function checkSkillBars() {
 }
 window.addEventListener('scroll', requestIdleish(checkSkillBars), { passive: true });
 function requestIdleish(fn) {
-  // returns a throttled handler
   let pending = false;
   return () => { if (!pending) { pending = true; requestAnimationFrame(() => { pending = false; fn(); }); } };
 }
 window.addEventListener('resize', requestIdleish(checkSkillBars), { passive: true });
 checkSkillBars();
 
-/* ---------- Typing effect ---------- */
-const TYPED_WORDS = ['Machine Learning Enthusiast', 'Python Developer', 'Full-Stack Builder', 'Data Storyteller'];
+const TYPED_WORDS = ['Machine Learning Enthusiast', 'Python Developer', 'Full-Stack Builder', 'Data Analyst'];
 (function typeLoop() {
   const el = document.getElementById('typed');
   if (!el) return;
@@ -130,7 +120,6 @@ const TYPED_WORDS = ['Machine Learning Enthusiast', 'Python Developer', 'Full-St
   step();
 })();
 
-/* ---------- Particle canvas ---------- */
 (function particles() {
   const c = document.getElementById('particle-canvas');
   if (!c) return;
@@ -166,7 +155,6 @@ const TYPED_WORDS = ['Machine Learning Enthusiast', 'Python Developer', 'Full-St
       ctx.fillStyle = 'rgba(148, 200, 255, 0.55)';
       ctx.fill();
     }
-    // connective lines
     for (let i = 0; i < parts.length; i++) {
       for (let j = i + 1; j < parts.length; j++) {
         const dx = parts[i].x - parts[j].x, dy = parts[i].y - parts[j].y;
@@ -179,7 +167,6 @@ const TYPED_WORDS = ['Machine Learning Enthusiast', 'Python Developer', 'Full-St
           ctx.stroke();
         }
       }
-      // mouse attraction line
       const md = Math.hypot(parts[i].x - mouse.x, parts[i].y - mouse.y);
       if (md < 160) {
         ctx.beginPath();
@@ -193,7 +180,6 @@ const TYPED_WORDS = ['Machine Learning Enthusiast', 'Python Developer', 'Full-St
   })();
 })();
 
-/* ---------- Mobile hamburger ---------- */
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => {
@@ -204,9 +190,7 @@ document.querySelectorAll('.nav-links a').forEach(a =>
   a.addEventListener('click', () => { hamburger.classList.remove('open'); navLinks.classList.remove('open'); })
 );
 
-/* ---------- Footer year ---------- */
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---------- Init ---------- */
 loadProjects();
 observeReveals();
